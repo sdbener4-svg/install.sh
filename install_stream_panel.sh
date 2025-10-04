@@ -1,22 +1,18 @@
 #!/bin/bash
-# ==========================================
-# Auto Installer: YouTube Streaming Web Panel
-# ==========================================
-
 set -e
 
 echo "🚀 Memulai instalasi panel streaming YouTube..."
 
-# --- Update system
+# Update system
 apt update -y && apt upgrade -y
 
-# --- Install dependencies
+# Install dependencies
 apt install -y python3 python3-pip ffmpeg git ufw
 
-# --- Install Python packages
+# Install Python packages
 pip3 install flask flask-socketio eventlet
 
-# --- Buat folder project
+# Buat folder project
 mkdir -p /var/www/stream-panel/uploads
 cd /var/www/stream-panel
 
